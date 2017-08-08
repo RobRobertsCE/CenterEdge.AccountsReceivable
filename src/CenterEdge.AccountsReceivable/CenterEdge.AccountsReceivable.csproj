@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net46;netstandard1.3</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AccountHolderType.cs" />
+    <Compile Remove="AccountType.cs" />
+    <Compile Remove="Adapters\TransactionTypeRepository.cs" />
+    <Compile Remove="Internal\Helpers\DistributedPaymentStrategy.cs" />
+    <Compile Remove="Internal\Helpers\FIFOPaymentStrategy.cs" />
+    <Compile Remove="Internal\Helpers\InvoicePaymentStrategy.cs" />
+    <Compile Remove="Internal\Services\TransactionService.cs" />
+    <Compile Remove="Internal\Services\TransactionValidationService.cs" />
+    <Compile Remove="Models\PurchaseAccount.cs" />
+    <Compile Remove="Models\UninvoicedPurchaseAccount.cs" />
+    <Compile Remove="Ports\ITransactionService.cs" />
+    <Compile Remove="Ports\ITransactionValidationService.cs" />
+    <Compile Remove="PurchaseType.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CenterEdge.Common.Helpers" Version="1.1.0" />
+    <PackageReference Include="CenterEdge.Common.Results" Version="1.0.0-ci000030" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.0.0-preview2-final" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.0.0-preview2-final" />
+    <PackageReference Include="NodaTime" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+</Project>
